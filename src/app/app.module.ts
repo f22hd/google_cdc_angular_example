@@ -8,6 +8,9 @@ import { HomeComponent } from './pages/home/home.component';
 import {HttpClientModule} from '@angular/common/http'
 import { PostItemComponent } from './core/components/post-item/post-item.component';
 import { PostDetailComponent } from './pages/post-detail/post-detail.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { HeaderComponent } from './components/header/header.component';
+import { TitlePipe } from './core/pipes/title.pipe';
 
 @NgModule({
   declarations: [
@@ -15,6 +18,9 @@ import { PostDetailComponent } from './pages/post-detail/post-detail.component';
     HomeComponent,
     PostItemComponent,
     PostDetailComponent,
+    FooterComponent,
+    HeaderComponent,
+    TitlePipe,
   ],
   imports: [
     BrowserModule,
