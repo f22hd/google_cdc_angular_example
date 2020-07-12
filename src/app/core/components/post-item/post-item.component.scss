@@ -1,0 +1,16 @@
+.card{
+    border-radius: 10px;
+}
+
+.card-title:hover{
+    cursor: pointer;
+}
+
+.inline-list li{
+    display: inline-block;
+    margin: auto 5px;
+
+    &::after{
+        content: ', ';
+    }
+}

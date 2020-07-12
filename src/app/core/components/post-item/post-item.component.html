@@ -1,0 +1,19 @@
+
+<div class="card">
+    <div class="card-body">
+     <h4 class="card-title" [routerLink]="'/post/'+post.id">{{post.title}}</h4>
+     <p class="card-text">{{post.body}}</p>
+
+     <ul class="inline-list list-inline">
+         <li>
+             <span>{{user?.name}}</span>
+         </li>
+         <li>
+             <span>{{createdAt | date}}</span>
+         </li>
+     </ul>
+    
+
+    
+    </div>
+</div>
