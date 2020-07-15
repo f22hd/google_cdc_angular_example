@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
 import { PostItemComponent } from './core/components/post-item/post-item.component';
 import { PostDetailComponent } from './pages/post-detail/post-detail.component';
 import { FooterComponent } from './components/footer/footer.component';

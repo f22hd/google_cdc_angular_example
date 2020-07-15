@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PostService } from 'src/app/core/service/post.service';
+import { Post } from 'src/app/core/models/post.model';
 
 @Component({
   selector: 'app-home',
@@ -8,18 +9,17 @@ import { PostService } from 'src/app/core/service/post.service';
 })
 export class HomeComponent implements OnInit {
 
-  posts;
+  posts: Post[];
 
   constructor(private postService: PostService) { }
 
   ngOnInit(): void {
-    this.fetch()
+    this.fetch();
   }
 
   private async fetch() {
-    const posts: any = await this.postService.getPosts().toPromise();
-    this.posts = posts.filter(i => i.id < 20);
-    console.log(this.posts)
+    const posts: Post[] = await this.postService.getPosts();
+    this.posts = posts.filter(i => i.id < 20); // show 20 posts
   }
 
 

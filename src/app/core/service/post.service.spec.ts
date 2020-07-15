@@ -14,9 +14,8 @@ describe('PostService', () => {
     expect(service).toBeTruthy();
   });
 
-  it('should posts be fetched',async ()  => {
-    const list = await service.getPosts().toPromise();
-    console.log(list)
+  it('should posts be fetched', async ()  => {
+    const list = await service.getPosts();
     expect(list).toBeDefined();
-  })
+  });
 });

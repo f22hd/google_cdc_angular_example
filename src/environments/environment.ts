@@ -4,7 +4,6 @@
 
 export const environment = {
   production: false,
-  base_url: "http://allebdi.me/wp-json"
 };
 
 /*

@@ -6,12 +6,12 @@ import { PostDetailComponent } from './pages/post-detail/post-detail.component';
 
 const routes: Routes = [
   {
-    path:'',
-    component:HomeComponent
+    path: '',
+    component: HomeComponent
   },
   {
     path: 'post/:id',
-    component:PostDetailComponent
+    component: PostDetailComponent
   }
 ];
 

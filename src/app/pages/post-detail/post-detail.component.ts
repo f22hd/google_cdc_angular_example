@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PostService } from 'src/app/core/service/post.service';
 import { ActivatedRoute } from '@angular/router';
+import { Post } from 'src/app/core/models/post.model';
 
 
 @Component({
@@ -10,23 +11,22 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class PostDetailComponent implements OnInit {
 
-  post;
+  post: Post;
 
   constructor(
-    private postService:PostService,
-    private activatedRoute:ActivatedRoute
+    private postService: PostService,
+    private activatedRoute: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
     const postId = this.activatedRoute.snapshot.paramMap.get('id');
-    if(postId){
+    if (postId){
       this.fetchPost(postId);
     }
   }
 
   private async fetchPost(id){
-    this.post = await this.postService.getPost(id).toPromise();
-    console.log(this.post);
+    this.post = await this.postService.getPost(id);
   }
 
 }
